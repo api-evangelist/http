@@ -1,0 +1,115 @@
+{
+  "@context": {
+    "@vocab": "https://www.w3.org/2011/http#",
+    "http": "https://www.w3.org/2011/http#",
+    "httpm": "https://www.w3.org/2011/http-methods#",
+    "httpsc": "https://www.w3.org/2011/http-statusCodes#",
+    "httph": "https://www.w3.org/2011/http-headers#",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+    "Request": "http:Request",
+    "Response": "http:Response",
+    "MessageHeader": "http:MessageHeader",
+    "HeaderElement": "http:HeaderElement",
+    "Connection": "http:Connection",
+
+    "method": {
+      "@id": "http:mthd",
+      "@type": "@vocab"
+    },
+    "requestURI": {
+      "@id": "http:requestURI",
+      "@type": "xsd:anyURI"
+    },
+    "httpVersion": {
+      "@id": "http:httpVersion",
+      "@type": "xsd:string"
+    },
+    "statusCode": {
+      "@id": "http:sc",
+      "@type": "xsd:integer"
+    },
+    "reasonPhrase": {
+      "@id": "http:reasonPhrase",
+      "@type": "xsd:string"
+    },
+    "headers": {
+      "@id": "http:headers",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "headerName": {
+      "@id": "http:hdrName",
+      "@type": "xsd:string"
+    },
+    "headerValue": {
+      "@id": "http:fieldValue",
+      "@type": "xsd:string"
+    },
+    "body": {
+      "@id": "http:body",
+      "@type": "xsd:string"
+    },
+
+    "GET": "httpm:GET",
+    "POST": "httpm:POST",
+    "PUT": "httpm:PUT",
+    "DELETE": "httpm:DELETE",
+    "PATCH": "httpm:PATCH",
+    "HEAD": "httpm:HEAD",
+    "OPTIONS": "httpm:OPTIONS",
+    "CONNECT": "httpm:CONNECT",
+    "TRACE": "httpm:TRACE",
+
+    "contentType": {
+      "@id": "httph:content-type",
+      "@type": "xsd:string"
+    },
+    "contentLength": {
+      "@id": "httph:content-length",
+      "@type": "xsd:integer"
+    },
+    "accept": {
+      "@id": "httph:accept",
+      "@type": "xsd:string"
+    },
+    "authorization": {
+      "@id": "httph:authorization",
+      "@type": "xsd:string"
+    },
+    "cacheControl": {
+      "@id": "httph:cache-control",
+      "@type": "xsd:string"
+    },
+    "etag": {
+      "@id": "httph:etag",
+      "@type": "xsd:string"
+    },
+    "location": {
+      "@id": "httph:location",
+      "@type": "xsd:anyURI"
+    },
+
+    "WebAPI": "schema:WebAPI",
+    "url": {
+      "@id": "schema:url",
+      "@type": "@id"
+    },
+    "name": {
+      "@id": "schema:name",
+      "@type": "xsd:string"
+    },
+    "description": {
+      "@id": "schema:description",
+      "@type": "xsd:string"
+    },
+    "conformsTo": {
+      "@id": "dcterms:conformsTo",
+      "@type": "@id"
+    }
+  }
+}

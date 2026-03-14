@@ -14,4 +14,24 @@ tags:
 created: '2025'
 modified: '2025'
 apis: []
-common: []
+common:
+- type: json-schema
+  name: HTTP Request Message
+  path: json-schema/http-request.json
+  description: JSON Schema describing the structure of an HTTP request message as
+    defined in RFC 9110 and RFC 9112.
+- type: json-schema
+  name: HTTP Response Message
+  path: json-schema/http-response.json
+  description: JSON Schema describing the structure of an HTTP response message as
+    defined in RFC 9110 and RFC 9112.
+- type: json-schema
+  name: HTTP Problem Details
+  path: json-schema/http-problem-details.json
+  description: JSON Schema describing the Problem Details format for HTTP APIs as
+    defined in RFC 9457.
+- type: json-ld
+  name: HTTP JSON-LD Context
+  path: json-ld/http-context.jsonld
+  description: JSON-LD context mapping HTTP concepts to the W3C HTTP Vocabulary in
+    RDF and Schema.org linked data vocabularies.

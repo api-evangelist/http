@@ -1,0 +1,122 @@
+{
+  "$id": "http-response.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HTTP Response Message",
+  "description": "Schema describing the structure of an HTTP response message as defined in RFC 9110 (HTTP Semantics) and RFC 9112 (HTTP/1.1).",
+  "type": "object",
+  "required": [
+    "statusCode"
+  ],
+  "properties": {
+    "httpVersion": {
+      "type": "string",
+      "description": "The HTTP version used for the response message (RFC 9112 Section 2.3).",
+      "pattern": "^HTTP/[0-9]+(\\.[0-9]+)?$",
+      "examples": [
+        "HTTP/1.1",
+        "HTTP/2",
+        "HTTP/3"
+      ]
+    },
+    "statusCode": {
+      "type": "integer",
+      "description": "The three-digit integer status code indicating the result of the request (RFC 9110 Section 15).",
+      "minimum": 100,
+      "maximum": 599,
+      "examples": [
+        200,
+        201,
+        301,
+        400,
+        404,
+        500
+      ]
+    },
+    "reasonPhrase": {
+      "type": "string",
+      "description": "A textual description associated with the status code (RFC 9112 Section 4). Primarily for human consumption in HTTP/1.1; absent in HTTP/2 and HTTP/3.",
+      "examples": [
+        "OK",
+        "Created",
+        "Not Found",
+        "Internal Server Error"
+      ]
+    },
+    "headers": {
+      "type": "object",
+      "description": "HTTP header fields that convey additional information about the response or the server (RFC 9110 Section 6.3).",
+      "properties": {
+        "Content-Type": {
+          "type": "string",
+          "description": "The media type of the response body (RFC 9110 Section 8.3).",
+          "examples": [
+            "application/json",
+            "text/html; charset=utf-8",
+            "application/problem+json"
+          ]
+        },
+        "Content-Length": {
+          "type": "integer",
+          "description": "The size of the response body in bytes (RFC 9110 Section 8.6).",
+          "minimum": 0
+        },
+        "Cache-Control": {
+          "type": "string",
+          "description": "Directives for caching mechanisms in the response chain (RFC 9111 Section 5.2).",
+          "examples": [
+            "public, max-age=3600",
+            "no-cache",
+            "private, no-store"
+          ]
+        },
+        "ETag": {
+          "type": "string",
+          "description": "An opaque validator for the current representation of the target resource (RFC 9110 Section 8.8.3).",
+          "examples": [
+            "\"33a64df5\"",
+            "W/\"0815\""
+          ]
+        },
+        "Last-Modified": {
+          "type": "string",
+          "description": "The date and time the resource was last modified (RFC 9110 Section 8.8.2).",
+          "format": "date-time"
+        },
+        "Location": {
+          "type": "string",
+          "description": "A URI reference for redirects or newly created resources (RFC 9110 Section 10.2.2).",
+          "format": "uri-reference"
+        },
+        "WWW-Authenticate": {
+          "type": "string",
+          "description": "Indicates the authentication scheme(s) and parameters applicable to the target resource (RFC 9110 Section 11.6.1)."
+        },
+        "Retry-After": {
+          "type": "string",
+          "description": "Indicates how long the client should wait before making a follow-up request (RFC 9110 Section 10.2.3)."
+        },
+        "Age": {
+          "type": "integer",
+          "description": "The estimated time in seconds since the response was generated or validated by the origin server (RFC 9111 Section 5.1).",
+          "minimum": 0
+        },
+        "Vary": {
+          "type": "string",
+          "description": "Describes the parts of the request that influenced the response content (RFC 9110 Section 12.5.5).",
+          "examples": [
+            "Accept",
+            "Accept-Encoding",
+            "Origin"
+          ]
+        }
+      },
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "body": {
+      "description": "The message body containing the payload data of the response (RFC 9110 Section 6.4)."
+    }
+  },
+  "additionalProperties": false
+}
