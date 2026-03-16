@@ -1,37 +1,28 @@
+aid: http
 name: HTTP
-description: HTTP (Hypertext Transfer Protocol) is the foundation-level protocol for
-  data communication on the World Wide Web, defining how messages are formatted and
-  transmitted between clients and servers. It operates as a request-response protocol
-  that enables browsers, APIs, and other clients to interact with web servers using
-  standard methods like GET, POST, PUT, and DELETE.
-url: https://developer.mozilla.org/en-US/docs/Web/HTTP
+description: >-
+  HTTP (Hypertext Transfer Protocol) is the foundation-level protocol for
+  data communication on the World Wide Web, defining how messages are formatted
+  and transmitted between clients and servers. It operates as a request-response
+  protocol enabling browsers, APIs, and other clients to interact with web
+  servers using standard methods like GET, POST, PUT, and DELETE.
+url: https://raw.githubusercontent.com/api-evangelist/http/refs/heads/main/apis.yml
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-- Protocol
-- Web
-- Networking
-- Security
-- Encryption
+  - Protocol
+  - Web
+  - Networking
+  - Standards
 created: '2025'
-modified: '2025'
+modified: '2026-03-16'
+specificationVersion: '0.19'
 apis: []
 common:
-- type: json-schema
-  name: HTTP Request Message
-  path: json-schema/http-request.json
-  description: JSON Schema describing the structure of an HTTP request message as
-    defined in RFC 9110 and RFC 9112.
-- type: json-schema
-  name: HTTP Response Message
-  path: json-schema/http-response.json
-  description: JSON Schema describing the structure of an HTTP response message as
-    defined in RFC 9110 and RFC 9112.
-- type: json-schema
-  name: HTTP Problem Details
-  path: json-schema/http-problem-details.json
-  description: JSON Schema describing the Problem Details format for HTTP APIs as
-    defined in RFC 9457.
-- type: json-ld
-  name: HTTP JSON-LD Context
-  path: json-ld/http-context.jsonld
-  description: JSON-LD context mapping HTTP concepts to the W3C HTTP Vocabulary in
-    RDF and Schema.org linked data vocabularies.
+  - type: Website
+    url: https://developer.mozilla.org/en-US/docs/Web/HTTP
+  - type: Reference
+    url: https://httpwg.org/specs/
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
