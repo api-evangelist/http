@@ -10,10 +10,10 @@ url: https://raw.githubusercontent.com/api-evangelist/http/refs/heads/main/apis.
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Protocol
-  - Web
   - Networking
+  - Protocol
   - Standards
+  - Web
 created: '2025'
 modified: '2026-03-16'
 specificationVersion: '0.19'
