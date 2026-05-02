@@ -1,0 +1,61 @@
+aid: http:http-rules
+name: HTTP Rules
+description: >-
+  Foundational rules and guidelines for designing, consuming, and
+  operating systems that exchange messages over the HTTP protocol.
+type: Rules
+tags:
+  - HTTP
+  - Networking
+  - Protocol
+  - Standards
+  - Web
+rules:
+  - name: Use Standard Methods Correctly
+    description: >-
+      GET is safe and idempotent, POST creates, PUT replaces, PATCH
+      partially updates, and DELETE removes. Do not change resource
+      state inside GET requests.
+  - name: Return Meaningful Status Codes
+    description: >-
+      Use 2xx for success, 3xx for redirection, 4xx for client errors,
+      and 5xx for server errors. Avoid returning 200 with an error
+      payload as the canonical signal of failure.
+  - name: Prefer HTTPS
+    description: >-
+      Serve all production traffic over TLS. Redirect plain HTTP to
+      HTTPS and set HSTS where appropriate.
+  - name: Honor Caching Semantics
+    description: >-
+      Use Cache-Control, ETag, and Last-Modified headers correctly.
+      Do not mark mutable responses as cacheable.
+  - name: Negotiate Content Types
+    description: >-
+      Use the Accept and Content-Type headers to negotiate
+      representations. Default to application/json for API payloads
+      unless a more specific media type applies.
+  - name: Use Problem Details For Errors
+    description: >-
+      Return RFC 9457 (formerly RFC 7807) application/problem+json
+      bodies for error responses so clients can parse a consistent
+      structure.
+  - name: Idempotency For Retries
+    description: >-
+      Implement idempotency keys for non idempotent methods like POST
+      so clients can safely retry on network failures.
+  - name: Apply Rate Limiting Headers
+    description: >-
+      Communicate rate limit state with X-RateLimit-* or RateLimit-*
+      headers so clients can back off gracefully.
+  - name: Validate Input Strictly
+    description: >-
+      Validate request bodies, headers, and query parameters at the
+      boundary. Reject malformed input with 400 Bad Request and a
+      problem details body.
+  - name: Stable URI Design
+    description: >-
+      Treat URIs as long lived identifiers. Avoid breaking changes to
+      paths and use redirects when paths must move.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

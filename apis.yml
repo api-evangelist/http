@@ -15,7 +15,7 @@ tags:
   - Standards
   - Web
 created: '2025'
-modified: '2026-03-16'
+modified: '2026-04-28'
 specificationVersion: '0.19'
 apis: []
 common:
@@ -23,6 +23,16 @@ common:
     url: https://developer.mozilla.org/en-US/docs/Web/HTTP
   - type: Reference
     url: https://httpwg.org/specs/
+  - type: JSONLDContext
+    url: json-ld/http-context.jsonld
+  - type: JSONSchema
+    url: json-schema/http-request.json
+  - type: JSONSchema
+    url: json-schema/http-response.json
+  - type: JSONSchema
+    url: json-schema/http-problem-details.json
+  - type: Rules
+    url: rules/http-rules.yml
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
