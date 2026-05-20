@@ -19,6 +19,8 @@ modified: '2026-04-28'
 specificationVersion: '0.19'
 apis: []
 common:
+  - type: GitHubOrganization
+    url: https://github.com/httpwg
   - type: Website
     url: https://developer.mozilla.org/en-US/docs/Web/HTTP
   - type: Reference
