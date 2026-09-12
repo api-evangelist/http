@@ -1,4 +1,5 @@
 aid: http
+x-type: concept
 name: HTTP
 description: >-
   HTTP (Hypertext Transfer Protocol) is the foundation-level protocol for
