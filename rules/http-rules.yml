@@ -1,10 +1,10 @@
-aid: http:http-rules
-name: HTTP Rules
+x-aid: http:http-rules
+x-name: HTTP Rules
 description: >-
   Foundational rules and guidelines for designing, consuming, and
   operating systems that exchange messages over the HTTP protocol.
-type: Rules
-tags:
+x-type: Rules
+x-tags:
   - HTTP
   - Networking
   - Protocol
@@ -56,6 +56,6 @@ rules:
     description: >-
       Treat URIs as long lived identifiers. Avoid breaking changes to
       paths and use redirects when paths must move.
-maintainers:
+x-maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
