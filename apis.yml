@@ -1,6 +1,7 @@
 aid: http
 x-type: concept
 name: HTTP
+kind: topic
 description: >-
   HTTP (Hypertext Transfer Protocol) is the foundation-level protocol for
   data communication on the World Wide Web, defining how messages are formatted
