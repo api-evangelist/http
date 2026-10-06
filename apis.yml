@@ -39,10 +39,14 @@ tags:
   - Standards
   - Web
 created: '2025'
-modified: '2026-04-28'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis: []
 common:
+  - url: https://developer.mozilla.org/en-US/blog/
+    type: Blog
+  - url: https://developer.mozilla.org/en-US/blog/rss.xml
+    type: BlogRSS
   - type: DomainSecurity
     url: security/http-domain-security.yml
   - type: GitHubOrganization
