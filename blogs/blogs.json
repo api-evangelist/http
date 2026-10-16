@@ -1,0 +1,21 @@
+{
+  "repo": "http",
+  "feeds": [
+    {
+      "source": "https://developer.mozilla.org/en-US/blog/",
+      "feed_url": "https://developer.mozilla.org/en-US/blog/rss.xml",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
+    },
+    {
+      "source": "https://developer.mozilla.org/en-US/blog/rss.xml",
+      "feed_url": "https://developer.mozilla.org/en-US/blog/rss.xml",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-10-10T13:15:00Z"
+}
